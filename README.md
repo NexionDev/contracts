@@ -53,8 +53,8 @@ The main contract that manages SSH configurations with the following features:
 ## 🌐 Network Configuration
 
 ### X Layer Testnet
-- **Chain ID**: 195
-- **RPC**: https://testrpc.xlayer.tech
+- **Chain ID**: 1952
+- **RPC**: https://xlayertestrpc.okx.com/terigon
 - **Gas Price**: ~0.03 gwei (ultra-low cost)
 
 ### X Layer Mainnet
@@ -117,13 +117,14 @@ contracts/
 │   ├── SSHManager.sol      # Main SSH management contract
 │   └── ISSHManager.sol     # Interface definition
 ├── flattened/              # Contract verification files
-│   └── SSHManager_v2_6KB_fixed.sol # Verified flatten file
+│   ├── SSHManager_final.sol
+│   └── SSHManager_verification.sol
 ├── test/
 │   └── SSHManager.test.ts  # Comprehensive test suite
 ├── ignition/modules/
 │   └── SSHManager.ts       # Deployment configuration
-├── fix-flatten.sh          # Verification file auto-fix script
-├── 合约验证指南.md          # Detailed verification guide
+├── scripts/                # Utility and debug scripts
+├── LICENSE                 # MIT License
 └── hardhat.config.ts       # Hardhat configuration
 ```
 
