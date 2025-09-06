@@ -1,0 +1,40 @@
+{
+  "name": "contracts",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:gas": "hardhat test --reporter gas",
+    "clean": "hardhat clean",
+    "node": "hardhat node",
+    "deploy:local": "hardhat ignition deploy ignition/modules/SSHManager.ts --network hardhatMainnet",
+    "deploy:xlayer-testnet": "hardhat ignition deploy ignition/modules/SSHManager.ts --network xlayerTestnet",
+    "deploy:xlayer-mainnet": "hardhat ignition deploy ignition/modules/SSHManager.ts --network xlayerMainnet",
+    "verify:xlayer-testnet": "hardhat verify --network xlayerTestnet",
+    "verify:xlayer-mainnet": "hardhat verify --network xlayerMainnet",
+    "flatten": "hardhat flatten contracts/SSHManager.sol > flattened/SSHManager_flattened.sol",
+    "size": "hardhat size-contracts",
+    "coverage": "hardhat coverage"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ignition": "^3.0.0",
+    "@nomicfoundation/hardhat-ignition-viem": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^3.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@nomicfoundation/hardhat-toolbox-viem": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^3.0.1",
+    "@types/chai": "^5.2.2",
+    "@types/node": "^22.18.0",
+    "dotenv": "^17.2.1",
+    "forge-std": "github:foundry-rs/forge-std#v1.9.4",
+    "hardhat": "^3.0.1",
+    "hardhat-deploy": "^1.0.4",
+    "typescript": "~5.8.0",
+    "viem": "^2.35.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "chai": "^6.0.1"
+  }
+}
